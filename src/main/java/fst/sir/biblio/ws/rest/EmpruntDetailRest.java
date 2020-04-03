@@ -54,6 +54,7 @@ public class EmpruntDetailRest {
     public boolean validateEmpruntDetail(Emprunt emprunt, List<EmpruntDetail> empruntDetails) {
         return empruntDetailService.validateEmpruntDetail(emprunt, empruntDetails);
     }
+    
     }
 //@PostMapping("/")
 //    public int save(Emprunt emprunt, List<EmpruntDetail> empruntDetails) {

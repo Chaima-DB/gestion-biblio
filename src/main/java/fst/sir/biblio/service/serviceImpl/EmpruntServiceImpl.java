@@ -35,7 +35,7 @@ public class EmpruntServiceImpl implements EmpruntService {
 
     @Autowired
     private EmpruntDetailService empruntDetailService;
-    private EmpruntDetail empruntDetail = new EmpruntDetail();
+    
     
     @Autowired
     private BibliothequeService bibliothequeService;
@@ -67,6 +67,7 @@ public class EmpruntServiceImpl implements EmpruntService {
     @Override
     public int restituer(String ref, Date dateRestitutionEffective) {
         Emprunt emprunt = findByRef(ref);
+        EmpruntDetail empruntDetail = new EmpruntDetail();
         if (emprunt == null) {
             return -1;
         } else if (empruntDetail.getDateRetourEffective() != null) {
